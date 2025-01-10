@@ -28,7 +28,9 @@ const NightSky: React.FC = () => {
     }
 
     // Draw stars
-    function drawStars() {
+    function drawStars() {   
+      if (!ctx || !canvas) return  // Add this null check
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       ctx.fillStyle = 'white'
       stars.forEach((star) => {
@@ -38,15 +40,16 @@ const NightSky: React.FC = () => {
       })
     }
 
-    // Create and animate shooting stars
     function createShootingStar() {
+      if (!canvas) return  // Add this null check
+      
       const x = -10 // Start off-screen
       const y = Math.random() * canvas.height
       const speed = Math.random() * 5 + 3 // Adjust speed as needed
       const size = Math.random() * 2 + 1 // Size of the shooting star
-
+    
       shootingStars.push({ x, y, speed, size })
-
+    
       setTimeout(() => {
         const index = shootingStars.findIndex((star) => star.x === x && star.y === y)
         if (index !== -1) {
@@ -56,23 +59,27 @@ const NightSky: React.FC = () => {
     }
 
     // Draw shooting stars
-    function drawShootingStars() {
-      ctx.fillStyle = 'white'
+    // Draw shooting stars
+    // Draw shooting stars
+function drawShootingStars() {
+  if (!ctx || !canvas) return  // Add canvas to the null check
 
-      shootingStars.forEach((star, index) => {
-        ctx.beginPath()
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2)
-        ctx.fill()
+  ctx.fillStyle = 'white'
+  shootingStars.forEach((star, index) => {
+    ctx.beginPath()
+    ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2)
+    ctx.fill()
 
-        star.x += star.speed
+    star.x += star.speed
 
-        // Remove star if it's off-screen
-        if (star.x > canvas.width) {
-          shootingStars.splice(index, 1)
-        }
-      })
+    // Remove star if it's off-screen
+    if (star.x > canvas.width) {
+      shootingStars.splice(index, 1)
     }
+  })
+}
 
+    // Rest of your code remains the same..
     // Animation loop
     function animate() {
       drawStars()
@@ -87,6 +94,8 @@ const NightSky: React.FC = () => {
 
     // Handle window resize
     const handleResize = () => {
+      if (!canvas) return  // Add this null check
+      
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
       stars.length = 0

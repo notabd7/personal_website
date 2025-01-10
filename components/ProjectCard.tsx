@@ -31,14 +31,17 @@ export default function ProjectCard({ title, description, videoUrl, loomUrl, gip
       },
       { threshold: 0.5 } // Trigger when 50% of the card is visible
     )
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current)
+  
+    // Store the current value of the ref
+    const currentCard = cardRef.current
+  
+    if (currentCard) {
+      observer.observe(currentCard)
     }
-
+  
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current)
+      if (currentCard) {
+        observer.unobserve(currentCard)
       }
     }
   }, [])

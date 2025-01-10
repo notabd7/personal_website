@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { useRef } from 'react'
+
 import AboutMe from '../components/AboutMe'
 import ProjectCard from '../components/ProjectCard'
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState('home')
+  //const [activeSection, setActiveSection] = useState('home')
   const aboutRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLDivElement>(null)
 
@@ -29,27 +29,27 @@ export default function Home() {
     }
   ]
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     //const scrollPosition = window.scrollY + window.innerHeight / 2
 
-      if (aboutRef.current && projectsRef.current) {
-        const aboutTop = aboutRef.current.offsetTop
-        const projectsTop = projectsRef.current.offsetTop
+  //     if (aboutRef.current && projectsRef.current) {
+  //       const aboutTop = aboutRef.current.offsetTop
+  //       const projectsTop = projectsRef.current.offsetTop
 
-        if (scrollPosition >= projectsTop) {
-          setActiveSection('projects')
-        } else if (scrollPosition >= aboutTop) {
-          setActiveSection('about')
-        } else {
-          setActiveSection('home')
-        }
-      }
-    }
+  //       // if (scrollPosition >= projectsTop) {
+  //       //   setActiveSection('projects')
+  //       // } else if (scrollPosition >= aboutTop) {
+  //       //   setActiveSection('about')
+  //       // } else {
+  //       //   setActiveSection('home')
+  //       // }
+  //     }
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  //   window.addEventListener('scroll', handleScroll)
+  //   return () => window.removeEventListener('scroll', handleScroll)
+  // }, [])
 
   return (
     <div className="min-h-screen">
