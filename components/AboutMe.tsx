@@ -15,10 +15,7 @@ export default function AboutMe() {
           𝕏.com
         </a>.
         I am most active there. Below are some products I worked hard on and deeply care about. 
-        I have not listed my tech stack and other details here because
-        I work on a lot of things. My projects will give you an idea of what
-        I am good at, but if you give me anything you want to build, I will build it. Fast.
-      </p>
+       </p>
     </div>
   )
 }
