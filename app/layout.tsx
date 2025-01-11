@@ -1,5 +1,5 @@
 'use client'
-
+import { Analytics } from "@vercel/analytics/react"
 import { Space_Mono } from 'next/font/google'
 import './globals.css'
 import NightSky from './components/NightSky'
@@ -47,7 +47,9 @@ export default function RootLayout({
           </main>
         </div>
         <Footer />
+        <Analytics />
       </body>
+
     </html>
   )
 }
