@@ -12,7 +12,7 @@ export default function Home() {
 
   const projects = [
     { id: 1, title: 'PacMan', description: 'designed and programmed PacMan. slowed ascent rate of a balloon with 5 kg of payloads and floated at 90000 feet twice', videoUrl: '/pacman_1.mp4' },
-    {id: 2, title: 'Enders Game', description: 'wrote this in C, compiled to WebAssembly, and hosted on vercel'},
+    {id: 2, title: 'Enders Game', description: 'wrote this in C, compiled to WebAssembly, and hosted on vercel', videoUrl: '/endersgame.mp4'},
     { id: 3, title: 'Sharing Excess (Work)', description: 'Built analytics tab for app.sharingexcess.com', videoUrl: '/work.mp4' },
     { id: 4, title: 'LearnIt', description: 'one place for students to come and study together', videoUrl: '/learnit.mp4' },
     { 
