@@ -12,17 +12,18 @@ export default function Home() {
 
   const projects = [
     { id: 1, title: 'PacMan', description: 'designed and programmed PacMan. slowed ascent rate of a balloon with 5 kg of payloads and floated at 90000 feet twice', videoUrl: '/pacman_1.mp4' },
-    { id: 2, title: 'Sharing Excess (Work)', description: 'Built analytics tab for app.sharingexcess.com', videoUrl: '/work.mp4' },
-    { id: 3, title: 'LearnIt', description: 'one place for students to come and study together', videoUrl: '/learnit.mp4' },
+    {id: 2, title: 'Enders Game', description: 'wrote this in C, compiled to WebAssembly, and hosted on vercel', videoUrl: '/endersgame.mp4'},
+    { id: 3, title: 'Sharing Excess (Work)', description: 'Built analytics tab for app.sharingexcess.com', videoUrl: '/work.mp4' },
+    { id: 4, title: 'LearnIt', description: 'one place for students to come and study together', videoUrl: '/learnit.mp4' },
     { 
-      id: 4, 
+      id: 5, 
       title: 'HealthyZ', 
       description: 'make telehealth faster and personalized', 
       loomUrl: 'https://www.loom.com/embed/e71a347cc7744754a53c122af8e5fe35?sid=63130626-4543-4024-a0ea-808374c02109'
     },
-    { id: 5, title: 'BrickBreaker', description: 'an arcade game on a CLUE board', videoUrl: '/brickbreaker_1.mp4' },
+    { id: 6, title: 'BrickBreaker', description: 'an arcade game on a CLUE board', videoUrl: '/brickbreaker_1.mp4' },
     { 
-      id: 6, 
+      id: 7, 
       title: 'Inferno OS', 
       description: 'playing with the inferno OS, not sure what I will do but stay tuned....', 
       giphyUrl: 'https://giphy.com/embed/M6bJf9VBmrN1qTtPyL'
